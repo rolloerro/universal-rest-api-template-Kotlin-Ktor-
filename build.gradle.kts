@@ -1,0 +1,21 @@
+plugins {
+    kotlin("jvm") version "1.9.23"
+    id("io.ktor.plugin") version "2.3.7"
+}
+
+application {
+    mainClass.set("app.ApplicationKt")
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("io.ktor:ktor-server-core")
+    implementation("io.ktor:ktor-server-netty")
+    implementation("io.ktor:ktor-server-content-negotiation")
+    implementation("io.ktor:ktor-serialization-gson")
+    testImplementation("io.ktor:ktor-server-tests")
+    testImplementation("org.jetbrains.kotlin:kotlin-test")
+}
