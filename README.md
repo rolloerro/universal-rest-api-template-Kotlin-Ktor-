@@ -1,112 +1,97 @@
 🟧 Universal REST API Template — Kotlin + Ktor
+<p align="center"> <img src="https://img.shields.io/badge/Kotlin-1.9+-7F52FF?logo=kotlin&logoColor=white" /> <img src="https://img.shields.io/badge/Ktor-2.x-0B7285?logo=ktor&logoColor=white" /> <img src="https://img.shields.io/badge/Gradle-Kotlin%20DSL-02303A?logo=gradle&logoColor=white" /> <img src="https://img.shields.io/badge/Build-Passing-brightgreen" /> <img src="https://img.shields.io/badge/License-MIT-lightgrey" /> </p>
+🚀 Описание
+
+Universal REST API Template (Kotlin + Ktor) — это чистый, лёгкий и расширяемый шаблон для API-приложений, микросервисов, прототипов и продакшн-сервисов.
+
+✔ Мгновенный старт
+✔ Чистая архитектура
+✔ Отдельные роуты
+✔ Kotlinx Serialization
+✔ Prod-ready структура
+
+Никакого мусора — только essentials.
+
+⚡ Stack
+Технология	Использование
+Kotlin 1.9+	Язык разработки
+Ktor 2.x	HTTP server framework
+Gradle Kotlin DSL	Сборка проекта
+Kotlinx Serialization	Работа с JSON
+SLF4J (в планах)	Логирование
+Docker (в планах)	Контейнеризация
+📦 Структура проекта
+src/
+└── main/
+    ├── kotlin/
+    │   └── app/
+    │       ├── Server.kt
+    │       └── routes/
+    │           ├── RootRoute.kt
+    │           ├── PingRoute.kt
+    │           └── EchoRoute.kt
+    └── resources/
+        └── application.conf
+
+build.gradle.kts
+settings.gradle.kts
+README.md
 
 
-
-
-
-
-
-
-
-
-💡 Готовый профессиональный шаблон REST API на Kotlin + Ktor, созданный для быстрых стартапов, pet-проектов, микросервисов и демонстрации навыков в портфолио.
-
-🚀 Возможности
-
-✔️ Готовые эндпоинты:
-
-GET / — корневой маршрут
-
-GET /ping — health check
-
-POST /echo — echo API (принимает JSON → возвращает JSON)
-
-✔️ Чистая структура проекта
-✔️ Kotlinx Serialization
-✔️ Ktor Routing
-✔️ Возможность расширения под микросервисы
-✔️ Подготовка к Docker
-✔️ Поддержка dev-mode
-
-🛠 Технологии
-
-Kotlin 1.9+
-
-Ktor 2.x
-
-Gradle Kotlin DSL
-
-Kotlinx Serialization
-
-SLF4J (в планах логирование)
-
-📂 Структура
-universal-rest-api-template-Kotlin-Ktor-
-├── src
-│   └── main
-│       ├── kotlin
-│       │   └── app
-│       │       ├── Server.kt
-│       │       └── routes
-│       │           ├── RootRoute.kt
-│       │           ├── PingRoute.kt
-│       │           └── EchoRoute.kt
-│       └── resources
-│           └── application.conf
-├── build.gradle.kts
-├── settings.gradle.kts
-└── README.md
+📌 Маршруты полностью изолированы
+📌 Главный сервер собирает их в единое приложение
 
 ▶️ Запуск
-Dev-режим (автоперезапуск)
+Dev-режим
 ./gradlew run
 
-Обычный запуск
+Полная сборка + запуск
 ./gradlew build
 ./gradlew run
 
-🔄 Эндпоинты
-Метод	Путь	Описание
-GET	/	Приветственное сообщение
+🔄 API Endpoints
+Method	Path	Description
+GET	/	Корневой маршрут
 GET	/ping	Проверка сервера
 POST	/echo	Возвращает присланный JSON
 Пример POST /echo
 
-Запрос:
+📤 Запрос:
 
 {
   "message": "hello"
 }
 
 
-Ответ:
+📥 Ответ:
 
 {
   "message": "hello"
 }
 
-🧭 Статус проекта
+🧭 Roadmap
 
-Проект в активной разработке
-В планах:
+ Dockerfile
 
-Dockerfile
+ docker-compose
 
-docker-compose
+ logback.xml
 
-logback.xml
+ CI GitHub Actions
 
-GitHub Actions CI
+ JWT auth module
 
-Расширенные health checks
+ Rate limiting
 
-JWT + Auth template
+ CORS-конфигуратор
+
+ Модульное тестирование (JUnit / Ktor Test)
 
 📄 Лицензия
 
-MIT License
+MIT License — делай что хочешь 🙃
 
 👤 Автор
 
-Kotlin Universal REST Template
-by rolloerro
+Template by rolloerro
+Kotlin / Ktor / Backend Engineering
